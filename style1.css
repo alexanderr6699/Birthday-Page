@@ -8,7 +8,7 @@ body {
   position: relative;
   z-index: 1;
   height: 100vh;
-  overflow: hidden;
+  overflow: visible;
   pointer-events: none;
 }
 
@@ -189,6 +189,17 @@ body {
 .cursor2 {
   --size: 2px;
   transition-duration: 0.7s;
+}
+@media (max-width: 768px) {
+  .carousel-item {
+    --width: 90vw;
+    --height: 70vh;
+  }
+
+  .carousel-item .title,
+  .carousel-item .num {
+    font-size: 5vw;
+  }
 }
 
 @font-face {
